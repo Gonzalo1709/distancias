@@ -18,11 +18,14 @@ def mainHandler():
     city3 = request.args.get('city3')
     option = request.args.get('option')
 
-    data1 = requests.get(f"https://nominatim.openstreetmap.org/search?q={country1}+{city1}&format=json").json()
+    response1 = requests.get(f"https://nominatim.openstreetmap.org/search?q={country1}+{city1}&format=json")
+    data1 = response1.json()
+    
+    response2 = requests.get(f"https://nominatim.openstreetmap.org/search?q={country2}+{city2}&format=json")
+    data2 = response2.json()
 
-    data2 = requests.get(f"https://nominatim.openstreetmap.org/search?q={country2}+{city2}&format=json").json()
-
-    data3 = requests.get(f"https://nominatim.openstreetmap.org/search?q={country3}+{city3}&format=json").json()
+    response3 = requests.get(f"https://nominatim.openstreetmap.org/search?q={country3}+{city3}&format=json")
+    data3 = response3.json()
 
     lat1 = data1[0]['lat']
     lon1 = data1[0]['lon']
