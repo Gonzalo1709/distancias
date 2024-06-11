@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Members
+- Gonzalo Alonso Perea Bartra
+- Kiara Alexandra Balcázar Santa Cruz 
+
 ## Getting Started
 
 First, run the development server:
